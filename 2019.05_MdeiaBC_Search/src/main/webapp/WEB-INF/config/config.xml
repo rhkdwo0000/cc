@@ -9,6 +9,9 @@
 		
 		<field name="batch.index.thread" type="integer">5</field>
 		
+		<field name="elasticsearch.url" type="string">https://search-ccs-search-nxuxtbqxpw3vv7nvklvsudnnwm.ap-northeast-2.es.amazonaws.com</field>
+		
+		
 		<!-- 
 		<field name="test.String"    type="string">testString</field>
 		<field name="test.Integer"   type="integer">1000</field>
