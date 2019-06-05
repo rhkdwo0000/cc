@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomahawk>
+	<serverName>MediaBlockChain SearchServer</serverName>
+	
+
+	<extras>
+		
+		
+		
+		<field name="batch.index.thread" type="integer">5</field>
+		
+		<!-- 
+		<field name="test.String"    type="string">testString</field>
+		<field name="test.Integer"   type="integer">1000</field>
+		<field name="test.Long"      type="long">1000</field>
+		<field name="test.Double"    type="double">1000.054</field>
+		-->
+		
+		
+		
+	</extras>
+</tomahawk>
