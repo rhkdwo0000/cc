@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>msi.mediabc</groupId>
@@ -109,9 +110,12 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
-
-
-
+		
+		<dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>transport</artifactId>
+			<version>5.0.1</version>
+		</dependency>
 
 
 		<!-- https://mvnrepository.com/artifact/commons-net/commons-net -->
@@ -128,27 +132,24 @@
 			<artifactId>json</artifactId>
 			<version>20141113</version>
 		</dependency>
-		 
-		 <!-- 
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.9.13</version>
-		</dependency>
-		-->
-		<!-- 
-		 <dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-databind</artifactId>
-		    <version>2.9.6</version>
-		</dependency>
-		-->
-		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-core</artifactId>
-		    <version>2.9.6</version>
-		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>org.codehaus.jackson</groupId> <artifactId>jackson-mapper-asl</artifactId> 
+			<version>1.9.13</version> </dependency> -->
+		<!-- <dependency> <groupId>com.fasterxml.jackson.core</groupId> <artifactId>jackson-databind</artifactId> 
+			<version>2.9.6</version> </dependency> -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.6</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
 		<dependency>
 			<groupId>com.google.guava</groupId>
@@ -220,18 +221,13 @@
 		</dependency>
 
 		<dependency>
-		    <groupId>com.github.nithril</groupId>
-		    <artifactId>smtp-connection-pool</artifactId>
-		    <version>1.2.1</version>
+			<groupId>com.github.nithril</groupId>
+			<artifactId>smtp-connection-pool</artifactId>
+			<version>1.2.1</version>
 		</dependency>
-<!-- 
-		<dependency>
-			<groupId>com.googlecode.mp4parser</groupId>
-			<artifactId>isoparser</artifactId>
-			<version>1.1.7</version>
-		</dependency>
--->
- 
+		<!-- <dependency> <groupId>com.googlecode.mp4parser</groupId> <artifactId>isoparser</artifactId> 
+			<version>1.1.7</version> </dependency> -->
+
 		<dependency>
 			<groupId>org.mp4parser</groupId>
 			<artifactId>isoparser</artifactId>
@@ -243,11 +239,11 @@
 		<!-- Amazon AWS -->
 		<!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk -->
 		<dependency>
-		    <groupId>com.amazonaws</groupId>
-		    <artifactId>aws-java-sdk</artifactId>
-		    <version>1.11.419</version>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+			<version>1.11.419</version>
 		</dependency>
-		
+
 
 		<dependency>
 			<groupId>com.jcraft</groupId>
@@ -259,10 +255,10 @@
 
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
-		    <groupId>org.projectlombok</groupId>
-		    <artifactId>lombok</artifactId>
-		    <version>1.18.8</version>
-		    <scope>provided</scope>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.8</version>
+			<scope>provided</scope>
 		</dependency>
 
 
@@ -291,27 +287,11 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
-			<!-- 
-			<exclusions>
-				<exclusion>
-					<groupId>javax.mail</groupId>
-					<artifactId>mail</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>javax.jms</groupId>
-					<artifactId>jms</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>com.sun.jdmk</groupId>
-					<artifactId>jmxtools</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>com.sun.jmx</groupId>
-					<artifactId>jmxri</artifactId>
-				</exclusion>
-			</exclusions>
-			<scope>runtime</scope>
-			-->
+			<!-- <exclusions> <exclusion> <groupId>javax.mail</groupId> <artifactId>mail</artifactId> 
+				</exclusion> <exclusion> <groupId>javax.jms</groupId> <artifactId>jms</artifactId> 
+				</exclusion> <exclusion> <groupId>com.sun.jdmk</groupId> <artifactId>jmxtools</artifactId> 
+				</exclusion> <exclusion> <groupId>com.sun.jmx</groupId> <artifactId>jmxri</artifactId> 
+				</exclusion> </exclusions> <scope>runtime</scope> -->
 		</dependency>
 
 		<!-- @Inject -->
@@ -364,8 +344,8 @@
 					<downloadJavadocs>true</downloadJavadocs>
 				</configuration>
 			</plugin>
-			
-			
+
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -378,20 +358,11 @@
 					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
-			
-			<!-- 
-			<plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-compiler-plugin</artifactId>
-		        <version>3.6.1</version>
-		        <configuration>
-		          <verbose>true</verbose>
-		          <fork>true</fork>
-		          <executable>/usr/bin/javac</executable>
-		          <compilerVersion>1.6</compilerVersion>
-		        </configuration>
-		      </plugin>
-		      -->
+
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-compiler-plugin</artifactId> 
+				<version>3.6.1</version> <configuration> <verbose>true</verbose> <fork>true</fork> 
+				<executable>/usr/bin/javac</executable> <compilerVersion>1.6</compilerVersion> 
+				</configuration> </plugin> -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
@@ -400,8 +371,8 @@
 					<mainClass>org.test.int1.Main</mainClass>
 				</configuration>
 			</plugin>
-			
-			
+
+
 		</plugins>
 
 	</build>

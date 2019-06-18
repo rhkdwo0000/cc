@@ -14,7 +14,7 @@ public class CCIndexerPoolWrapper {
 	private GenericObjectPool<ObjectTicket> objectPool = null;
 	
 	private static CCIndexerPoolWrapper instance = null;
-	private CCIndexerPoolWrapper() {
+	private CCIndexerPoolWrapper() {// 해당 객체를 만들면 밑과 같이 factory 와 maxactive 를 세팅한후 GenericObjectPool객체 생성을 해준다.
 		Integer threadNum = Configuration.getInstance().getIntegerExtra("batch.index.thread");
 		factory = new ObjectTicketPool();
         objectPool = new GenericObjectPool<ObjectTicket>(factory, threadNum.intValue());
@@ -22,7 +22,7 @@ public class CCIndexerPoolWrapper {
 	
     public static synchronized CCIndexerPoolWrapper getInstance() {
         if (instance == null) {
-            instance = new CCIndexerPoolWrapper();
+            instance = new CCIndexerPoolWrapper();// getInstance 로만 해당클래스에 접근 
         }
         return instance;
     }
